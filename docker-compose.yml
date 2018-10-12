@@ -8,9 +8,10 @@ services:
     volumes:
       - postgresdata:/var/lib/postgresql/data
   invidious:
-    build:
-      context: .
-      dockerfile: docker/Dockerfile
+    image: flourgaz/invidious:test
+    # build:
+    #   context: .
+    #   dockerfile: docker/Dockerfile
     restart: unless-stopped
     ports:
       - "3000:3000"
